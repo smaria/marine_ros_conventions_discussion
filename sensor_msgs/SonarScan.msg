@@ -1,7 +1,6 @@
 # Scans from sonar devices 
 # from single beam to scans with rotation around one axis
 
-
 Header header            # timestamp in the header is the acquisition time of
                          # the first measurement of the scan
                          #
@@ -22,6 +21,13 @@ float32 range_min        # minimum range value [m]
 float32 range_max        # maximum range value [m]
 float32 range_increment  # range resolution [m]
 
-SonarBeam[] beams        # Imaging sonar data. (Note: first beam corresponds to angle_min direction
-                         # while last beam corresponds to angle_max direction.
-                         # There are (angle_max - angle_min) / angle_increment + 1 beams. 
+# arrays with sonar measurements 
+# first entry corresponds to measurement in angle_min direction,
+# consecutive entries from directions with angle_increment added to the previous direction
+# there are (angle_max - angle_min) / angle_increment + 1 measurements in each field
+# if only ranges or arrays with intensities are available, leave the other empty
+
+float32[] ranges         # range data [m]
+
+SonarBeam[] intensities  # intensity data [device-specific units]
+
