@@ -13,7 +13,9 @@ float32 angle_min        # start angle of the image [rad]
 float32 angle_max        # end angle of the image [rad], empty for single beam
 float32 angle_increment  # angular distance between beam centers [rad], empty for single beam
 
-float32 beam_width       # [rad]
+float32 beam_width_z     # opening angle, rotation around z axis [rad]
+float32 beam_width_y     # opening angle, rotation around y axis [rad]
+                         # (orthogonal to plane of rotation)
 float32 elevation_angle  # [rad]
 float32 sound_frequency  # [Hz]
 
