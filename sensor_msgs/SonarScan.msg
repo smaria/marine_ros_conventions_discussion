@@ -1,12 +1,12 @@
 # Scans from sonar devices 
 # from single beam to scans with rotation around one axis
 
-Header header            # timestamp in the header is the acquisition time of
-                         # the first measurement of the scan
-                         #
-                         # in frame frame_id, angles are measured around
+Header header            # in frame frame_id, angles are measured around
                          # the positive Z axis (counterclockwise, if Z is up)
                          # with zero angle being forward along the x axis
+
+float32 sensor_time      # acquisition time of
+                         # the first measurement of the scan
 
 float32 angle_min        # start angle of the image [rad]
 float32 angle_max        # end angle of the image [rad], empty for single beam
