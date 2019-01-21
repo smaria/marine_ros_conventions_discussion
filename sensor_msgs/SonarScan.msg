@@ -5,7 +5,7 @@ Header header            # in frame frame_id, angles are measured around
                          # the positive Z axis (counterclockwise, if Z is up)
                          # with zero angle being forward along the x axis
 
-float32 sensor_time      # acquisition time of
+time sensor_time         # acquisition time of
                          # the first measurement of the scan
 
 float32 angle_min        # start angle of the image [rad]
